@@ -1,5 +1,6 @@
 {
   "name": "monster-automation",
+  "displayName": "Monster Automation",
   "version": "1.1.2",
   "description": "Сценарии Monster Automation через единый MCP с персональным доступом сотрудника.",
   "author": {

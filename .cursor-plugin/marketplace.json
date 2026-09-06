@@ -10,6 +10,7 @@
   "plugins": [
     {
       "name": "monster-automation",
+      "displayName": "Monster Automation",
       "source": "monster-automation",
       "description": "Сценарии Monster Automation через единый MCP с персональным доступом сотрудника.",
       "logo": "monster-automation/assets/logo.png"
