@@ -1,0 +1,34 @@
+{
+  "name": "monster-automation",
+  "version": "1.1.0",
+  "description": "Сценарии Monster Automation через единый MCP с персональным доступом сотрудника.",
+  "author": {
+    "name": "Monster Automation"
+  },
+  "homepage": "https://app.monster-automation.com",
+  "repository": "https://github.com/MagnumMax/monster-automation-cursor",
+  "skills": [
+    "./skills/ma-help",
+    "./skills/ma-idea-to-plan",
+    "./skills/ma-design-screen",
+    "./skills/ma-revise-project",
+    "./skills/ma-product-pass",
+    "./skills/ma-signoff",
+    "./skills/ma-deploy",
+    "./skills/ma-seo-geo-audit"
+  ],
+  "mcpServers": "./mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "MA_MCP_TOKEN": {
+        "type": "string",
+        "title": "Персональный ключ MCP",
+        "description": "Ключ из кабинета Monster Automation → MCP-доступ. Формат ma_… В репозиторий не кладётся."
+      }
+    },
+    "required": [
+      "MA_MCP_TOKEN"
+    ]
+  }
+}

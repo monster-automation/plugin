@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "monster-automation": {
+      "url": "https://app.monster-automation.com/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MA_MCP_TOKEN}"
+      }
+    }
+  }
+}
