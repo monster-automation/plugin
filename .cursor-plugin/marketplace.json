@@ -1,0 +1,18 @@
+{
+  "name": "monster-automation",
+  "owner": {
+    "name": "Monster Automation",
+    "email": "hello@monster-automation.com"
+  },
+  "metadata": {
+    "description": "Сценарии Monster Automation через единый MCP с персональным доступом сотрудника."
+  },
+  "plugins": [
+    {
+      "name": "monster-automation",
+      "source": "monster-automation",
+      "description": "Сценарии Monster Automation через единый MCP с персональным доступом сотрудника.",
+      "logo": "monster-automation/assets/logo.png"
+    }
+  ]
+}
