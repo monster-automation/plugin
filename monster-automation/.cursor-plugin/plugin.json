@@ -1,13 +1,13 @@
 {
   "name": "monster-automation",
   "displayName": "Monster Automation",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Сценарии Monster Automation через единый MCP с персональным доступом сотрудника.",
   "author": {
     "name": "Monster Automation"
   },
   "homepage": "https://app.monster-automation.com",
-  "repository": "https://github.com/tecor-dev/plugin",
+  "repository": "https://github.com/monster-automation/plugin",
   "logo": "assets/logo.png",
   "skills": [
     "./skills/ma-help",
