@@ -26,10 +26,14 @@ async function ensureDirectory(directory) {
   }
 }
 
-async function readRegular(filename) {
+async function readExact(filename) {
   const stat = await lstat(filename);
   if (!stat.isFile() || stat.isSymbolicLink()) throw new Error("Ожидался обычный файл без символических ссылок.");
-  return readFile(filename, "utf8");
+  return readFile(filename);
+}
+
+async function readRegular(filename) {
+  return (await readExact(filename)).toString("utf8");
 }
 
 async function listRegularFiles(directory, prefix = "") {
@@ -64,6 +68,12 @@ export async function loadBundle(source = sourceRoot) {
     if (!/^\.\/skills\/ma-[a-z0-9-]+$/.test(skill)) throw new Error("Недопустимый путь skill в пакете.");
     const relative = `${skill.slice(2)}/SKILL.md`;
     files.set(relative, await readRegular(path.join(source, relative)));
+  }
+  if (typeof manifest.logo === "string") {
+    if (!/^assets\/[A-Za-z0-9._-]+\.(png|svg)$/.test(manifest.logo)) {
+      throw new Error("Недопустимый путь иконки в пакете.");
+    }
+    files.set(manifest.logo, await readExact(path.join(source, manifest.logo)));
   }
   return { files, config, version: manifest.version };
 }
@@ -103,7 +113,7 @@ export async function install({ token, update = false, userHome = homedir(), sou
     }
     for (const [relative, hash] of Object.entries(marker.files)) {
       if (!files.has(relative)) throw new Error("Состав установленного плагина изменился. Нужна ручная проверка.");
-      if (digest(await readRegular(path.join(target, relative))) !== hash) {
+      if (digest(await readExact(path.join(target, relative))) !== hash) {
         throw new Error("В установленном плагине есть ручные изменения. Сохраните их перед обновлением.");
       }
     }
