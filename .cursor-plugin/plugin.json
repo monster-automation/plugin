@@ -1,12 +1,12 @@
 {
   "name": "monster-automation",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Сценарии Monster Automation через единый MCP с персональным доступом сотрудника.",
   "author": {
     "name": "Monster Automation"
   },
   "homepage": "https://app.monster-automation.com",
-  "repository": "https://github.com/MagnumMax/monster-automation-cursor",
+  "repository": "https://github.com/MagnumMax/monster-automation-plugin",
   "logo": "assets/logo.png",
   "skills": [
     "./skills/ma-help",
