@@ -1,7 +1,7 @@
 {
   "name": "monster-automation",
   "displayName": "Monster Automation",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Сценарии Monster Automation через единый MCP с персональным доступом сотрудника.",
   "author": {
     "name": "Monster Automation"
@@ -11,6 +11,7 @@
   "logo": "assets/logo.png",
   "skills": [
     "./skills/ma-help",
+    "./skills/ma-checkup",
     "./skills/ma-idea-to-plan",
     "./skills/ma-design-screen",
     "./skills/ma-revise-project",
