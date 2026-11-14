@@ -1,6 +1,6 @@
 ---
 name: ma-commit
-description: "Закрывает работу: область → при чужих правках отдельная копия → очередь → /ma-signoff → коммит → после очереди simplify + ponytail-review (логика) + react-doctor/UX при UI → один typecheck+lint → один push на `dev` → убрать ветки и временные копии, уже влитые в `dev` → задачу в МА на ревью."
+description: "Закрывает работу: область → при чужих правках стоп → очередь → /ma-signoff → коммит → после очереди simplify + ponytail-review (логика) + react-doctor/UX при UI → один typecheck+lint → один push на `dev` → убрать лишние ветки → SHA в задачу → ссылки на экраны → скриншоты от человека → задачу в МА на ревью."
 disable-model-invocation: true
 ---
 # Закрыть и закрепить задачу
